@@ -1,6 +1,6 @@
-import SchoolModel from "../models/School.js";
+const SchoolModel = require("../models/School.js");
 
-export const school = async (req, res) => {
+const school = async (req, res) => {
   try {
     const school = await SchoolModel.find();
     res.json(...school);
@@ -11,3 +11,5 @@ export const school = async (req, res) => {
     });
   }
 };
+
+module.exports = school;

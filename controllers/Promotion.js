@@ -1,6 +1,6 @@
-import PromotionModel from "../models/Promotion.js";
+const PromotionModel = require("../models/Promotion.js");
 
-export const promotion = async (req, res) => {
+const promotion = async (req, res) => {
   try {
     const promotion = await PromotionModel.find();
     res.json(...promotion);
@@ -11,3 +11,5 @@ export const promotion = async (req, res) => {
     });
   }
 };
+
+module.exports = promotion;

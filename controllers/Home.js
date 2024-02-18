@@ -1,6 +1,6 @@
-import HomeModel from "../models/Home.js";
+const HomeModel = require("../models/Home.js");
 
-export const home = async (req, res) => {
+const home = async (req, res) => {
   try {
     const home = await HomeModel.find();
 
@@ -12,3 +12,5 @@ export const home = async (req, res) => {
     });
   }
 };
+
+module.exports = home;

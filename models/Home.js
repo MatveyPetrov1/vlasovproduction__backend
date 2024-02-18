@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+const { Schema, model } = require("mongoose");
 
 const homeSchema = new Schema({
   photographyCards: Array,
@@ -9,4 +9,4 @@ const homeSchema = new Schema({
   backstage: String,
 });
 
-export default model("homepage", homeSchema);
+module.exports = model("homepage", homeSchema);

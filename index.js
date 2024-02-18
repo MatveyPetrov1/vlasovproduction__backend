@@ -1,14 +1,14 @@
-import express from "express";
-import mongoose from "mongoose";
-import cors from "cors";
-import { home } from "./controllers/Home.js";
-import { portpholio } from "./controllers/Portpholio.js";
-import { promotion } from "./controllers/Promotion.js";
-import { school } from "./controllers/School.js";
-import { application } from "./controllers/Application.js";
-import { header } from "./controllers/Header.js";
-import { ApplicationValidator } from "./utils/Validations.js";
-import dotenv from "dotenv";
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const home = require("./controllers/Home.js");
+const portpholio = require("./controllers/Portpholio.js");
+const promotion = require("./controllers/Promotion.js");
+const school = require("./controllers/School.js");
+const application = require("./controllers/Application.js");
+const header = require("./controllers/Header.js");
+const ApplicationValidator = require("./utils/Validations.js");
+const dotenv = require("dotenv");
 
 dotenv.config();
 

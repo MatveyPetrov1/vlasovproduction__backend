@@ -1,9 +1,9 @@
-import nodemailer from "nodemailer";
-import { validationResult } from "express-validator";
-import ApplicationModel from "../models/Application.js";
-import dotenv from "dotenv";
+const nodemailer = require("nodemailer");
+const { validationResult } = require("express-validator");
+const ApplicationModel = require("../models/Application.js");
+const dotenv = require("dotenv");
 
-export const application = async (req, res) => {
+const application = async (req, res) => {
   const result = validationResult(req);
   if (!result.isEmpty()) {
     return res.json(result.array());
@@ -46,3 +46,5 @@ export const application = async (req, res) => {
     message: "success",
   });
 };
+
+module.exports = application;

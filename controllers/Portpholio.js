@@ -1,6 +1,6 @@
-import PortpholioModel from "../models/Portpholio.js";
+const PortpholioModel = require("../models/Portpholio.js");
 
-export const portpholio = async (req, res) => {
+const portpholio = async (req, res) => {
   try {
     const portpholio = await PortpholioModel.find();
     res.json(...portpholio);
@@ -11,3 +11,5 @@ export const portpholio = async (req, res) => {
     });
   }
 };
+
+module.exports = portpholio;

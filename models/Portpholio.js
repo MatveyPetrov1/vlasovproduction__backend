@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+const { Schema, model } = require("mongoose");
 
 const portpholioSchema = new Schema({
   school: {
@@ -11,4 +11,4 @@ const portpholioSchema = new Schema({
   },
 });
 
-export default model("portpholiopage", portpholioSchema);
+module.exports = model("portpholiopage", portpholioSchema);

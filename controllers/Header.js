@@ -1,6 +1,6 @@
-import HeaderModel from "../models/Header.js";
+const HeaderModel = require("../models/Header.js");
 
-export const header = async (req, res) => {
+const header = async (req, res) => {
   try {
     const header = await HeaderModel.find();
     res.json(...header);
@@ -11,3 +11,5 @@ export const header = async (req, res) => {
     });
   }
 };
+
+module.exports = header;
