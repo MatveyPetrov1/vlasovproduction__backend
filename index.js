@@ -6,6 +6,7 @@ import { portpholio } from "./controllers/Portpholio.js";
 import { promotion } from "./controllers/Promotion.js";
 import { school } from "./controllers/School.js";
 import { application } from "./controllers/Application.js";
+import { header } from "./controllers/Header.js";
 import { ApplicationValidator } from "./utils/Validations.js";
 import dotenv from "dotenv";
 
@@ -28,6 +29,7 @@ app.get("/portpholio", portpholio);
 app.get("/promotion", promotion);
 app.get("/school", school);
 app.post("/application", ApplicationValidator, application);
+app.get("/header", header);
 
 app.listen(PORT, (err) => {
   if (err) {
