@@ -17,7 +17,7 @@ mongoose
   .then(() => console.log("DB is OK"))
   .catch((err) => console.log("DB is not OK", err));
 
-const PORT = process.env.PORT || 4444;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
