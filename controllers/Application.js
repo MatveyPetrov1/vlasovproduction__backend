@@ -3,6 +3,8 @@ const { validationResult } = require("express-validator");
 const ApplicationModel = require("../models/Application.js");
 const dotenv = require("dotenv");
 
+dotenv.config();
+
 const application = async (req, res) => {
   const result = validationResult(req);
   if (!result.isEmpty()) {
