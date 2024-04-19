@@ -9,7 +9,8 @@ const application = async (req, res) => {
       return res.json(result.array());
     }
     if (req.body.city !== "Выберите город") {
-      console.log(req.body.city);
+      const concity = req.body.city;
+      console.log(concity);
       const transporter = nodemailer.createTransport({
         service: "mail",
         auth: {
