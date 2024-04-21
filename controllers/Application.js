@@ -9,10 +9,8 @@ const application = async (req, res) => {
       return res.json(result.array());
     }
     if (req.body.city !== "Выберите город") {
-      const concity = req.body.city;
-      console.log(concity);
       const transporter = nodemailer.createTransport({
-        service: "mail",
+        service: "gmail",
         auth: {
           user: process.env.APP_GMAIL,
           pass: process.env.APP_PASS,
@@ -20,12 +18,12 @@ const application = async (req, res) => {
       });
       const mailOptions = {
         from: process.env.APP_GMAIL,
-        to: process.env.APP_GMAIL,
+        to: "vlasov.production.doc@mail.ru",
         subject: "VLASOV PRODUCTION",
         text: `Имя: ${req.body.name}
-		Телефон: ${req.body.phone}
-		Сообщение: ${req.body.text}
-		Город: ${req.body.city}`,
+      Телефон: ${req.body.phone}
+      Сообщение: ${req.body.text}
+      Город: ${req.body.city}`,
       };
 
       const doc = new ApplicationModel({
@@ -45,7 +43,7 @@ const application = async (req, res) => {
         }
       });
 
-      res.json({
+      res.status(200).json({
         message: "success",
       });
     } else {
